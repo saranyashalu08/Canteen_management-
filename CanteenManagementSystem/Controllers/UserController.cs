@@ -51,16 +51,6 @@ namespace CanteenManagementSystem.Controllers
             }
             return View();
         }
-        public ActionResult Admin()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Admin()
-        {
-
-            return View();
-        }
 
     }
 }

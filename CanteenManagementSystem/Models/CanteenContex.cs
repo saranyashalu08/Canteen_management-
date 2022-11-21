@@ -17,5 +17,6 @@ namespace CanteenManagementSystem.Models
         public DbSet<MenuItems> MenuItems { get; set; }
         public DbSet<Transactions> Transactions { get; set; }
         public DbSet<Cart> Cart { get; set; }
+        public DbSet<Admin> Admin { get; set; }
     }
 }
