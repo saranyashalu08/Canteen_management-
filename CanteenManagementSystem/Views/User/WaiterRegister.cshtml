@@ -1,7 +1,136 @@
-﻿
+﻿@model CanteenManagementSystem.Models.Login
 @{
     ViewBag.Title = "WaiterRegister";
 }
+<head>
+    <link href="~/Content/WaiterRegister.css" rel="stylesheet" />
 
-<h2>WaiterRegister</h2>
+</head>
+<h2>Waiter Registration</h2>
+<div class="bg">
+    
+    @using (Html.BeginForm("WaiterRegister", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <form action="#" method="get">
+                    <div class="container">
+                        <div class="form-group">
+                            <div class="input-group" >
+                                <div class="input-group-addon" ><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.TextBoxFor(l => l.UserName, new { @class = "form-control", @placeholder = "User name" })
+
+
+
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(l => l.UserName)</span>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="container" >
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                @Html.PasswordFor(l => l.Password, new { @class = "form-control", @placeholder = "Password" })
+
+
+
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(l => l.Password)</span>
+
+                        </div>
+                        
+
+
+                    </div>
+
+
+                    <div class="container">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                @Html.PasswordFor(l => l.ConPassword, new { @class = "form-control", @placeholder = "Confirm Password" })
+
+
+
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(l => l.ConPassword)</span>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="container">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.TextBoxFor(l => l.Firstname, new { @class = "form-control", @placeholder = "First Name" })
+
+
+
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(l => l.Firstname)</span>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="container">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.TextBoxFor(l => l.Lastname, new { @class = "form-control", @placeholder = "Last Name" })
+
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="container">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></div>
+                                @Html.TextBoxFor(l => l.Phonenumber, new { @class = "form-control", @placeholder = "Mobile Number" })
+
+
+
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(l=> l.Phonenumber)</span>
+
+                        </div>
+
+
+
+                    </div>
+
+                    
+
+                    <div>
+                        <div class="form-group">
+
+                            <input type="submit" value="Register" class="btn btn-success btn-block" />
+
+                        </div>
+                    </div>
+
+
+
+                </form>
+        
+
+            }
+</div>
 

@@ -19,8 +19,9 @@ namespace CanteenManagementSystem.Models
         public string Password { get; set; }
         [Compare("Password", ErrorMessage = "Password should be Same.")]
         public string ConPassword { get; set; }
+        [Required(ErrorMessage = "Enter First Name")]
         public string Firstname { get; set; }
-        [Required(ErrorMessage ="Enter First Name")]
+       
         public string Lastname { get; set; }
         public string Phonenumber { get; set; }
         public string TableNo { get; set; }
